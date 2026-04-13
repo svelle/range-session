@@ -500,7 +500,7 @@ function renderSpeedChart() {
   const H = SPEED_CHART_H;
   const M = { l: 60, r: 30, t: 20, b: 50 };
   const innerW = W - M.l - M.r, innerH = H - M.t - M.b;
-  const data = app.SHOTS.filter(s => s.ballSpeed != null && s.carry != null);
+  const data = app.SHOTS.filter(s => isVisible(s) && s.ballSpeed != null && s.carry != null);
   const toU = (m) => displayLen(m);
   const niceMax2 = (v, step) => Math.ceil(v / step) * step;
   const xMax = data.length ? niceMax2(Math.max(...data.map(s => s.ballSpeed)) * 1.1, 20) : 120;
@@ -568,7 +568,7 @@ function renderSpeedChart() {
 
 // ----- Histogram
 function renderHistogram() {
-  const carries = app.SHOTS.map(s => s.carry).filter(v => v != null);
+  const carries = app.SHOTS.filter(isVisible).map(s => s.carry).filter(v => v != null);
   if (!carries.length) { document.getElementById('hist-carry').innerHTML = '<div style="color:var(--muted);font-style:italic;font-family:Fraunces,serif">No carry data</div>'; return; }
   const maxC = Math.ceil(Math.max(...carries) / 10) * 10;
   const buckets = {};
@@ -593,7 +593,7 @@ function renderSpinChart() {
   const H = SPIN_CHART_H;
   const M = { l: 60, r: 30, t: 20, b: 50 };
   const innerW = W - M.l - M.r, innerH = H - M.t - M.b;
-  const data = app.SHOTS.filter(s => s.spinAxis != null && s.curve != null);
+  const data = app.SHOTS.filter(s => isVisible(s) && s.spinAxis != null && s.curve != null);
   const toU = (m) => displayLen(m);
   const xMin = -90, xMax = 30, yMin = -25, yMax = 10;
   const yMinD = toU(yMin);
