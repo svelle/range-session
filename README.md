@@ -11,6 +11,8 @@ Live version here: https://svelle.github.io/range-session/
 <img width="1965" height="1323" alt="image" src="https://github.com/user-attachments/assets/c3706b10-6c1b-46b9-a5c6-dc507a71e2e5" />
 <img width="1965" height="1323" alt="image" src="https://github.com/user-attachments/assets/9ed26498-26de-44ca-b32e-68153b453d6a" />
 
+<img width="757" height="358" alt="image" src="https://github.com/user-attachments/assets/31ae4a46-62d4-4941-a58f-144ec41d5af4" />
+
 
 ## Running locally
 
