@@ -2,6 +2,8 @@
 
 A single-page web app for exploring golf launch-monitor exports. Upload one or more CSV files from a session; the dashboard builds charts, filters, benchmarks, and a shot list around whatever columns are present. The page also ships with embedded sample data so the UI is never empty on first load.
 
+Live version here: https://svelle.github.io/range-session/
+
 ## Running locally
 
 Requires [Bun](https://bun.sh) (v1.0+).
