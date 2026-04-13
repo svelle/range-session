@@ -4,6 +4,14 @@ A single-page web app for exploring golf launch-monitor exports. Upload one or m
 
 Live version here: https://svelle.github.io/range-session/
 
+## Screenshots
+
+<img width="1965" height="1323" alt="image" src="https://github.com/user-attachments/assets/c2fb7da5-4081-488e-ab2a-b35d6f064016" />
+<img width="1965" height="1323" alt="image" src="https://github.com/user-attachments/assets/10bcbeca-dc8b-4ca7-99d3-ae3c8f5eb34c" />
+<img width="1965" height="1323" alt="image" src="https://github.com/user-attachments/assets/c3706b10-6c1b-46b9-a5c6-dc507a71e2e5" />
+<img width="1965" height="1323" alt="image" src="https://github.com/user-attachments/assets/9ed26498-26de-44ca-b32e-68153b453d6a" />
+
+
 ## Running locally
 
 Requires [Bun](https://bun.sh) (v1.0+).
