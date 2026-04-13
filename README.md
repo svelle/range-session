@@ -15,6 +15,15 @@ Use `bun run dev` to watch `server.ts` and restart on changes. Override the port
 
 You can open `golf_dispersion.html` directly in a browser; serving via Bun avoids `file://` limitations. The **3D** view loads Plotly from a CDN, so that tab needs network access.
 
+## GitHub Pages
+
+This repo includes [`.github/workflows/pages.yml`](.github/workflows/pages.yml): on push to `main` or `master`, it copies `golf_dispersion.html` to `index.html`, optionally includes a `data/` folder if present, and deploys with **Actions → GitHub Pages**.
+
+1. In the repository **Settings → Pages**, set **Source** to **GitHub Actions** (not “Deploy from a branch”).
+2. Push to `main` (or run the workflow manually). The site URL will be `https://<user>.github.io/<repo>/` for a project site.
+
+There is no separate build toolchain; the app is static HTML.
+
 ## CSV format
 
 The parser is **header-driven**: the first row must be column names. Names are matched **case-insensitively** after normalizing spaces, parentheses, `#`, and common unit suffixes (`mph`, `rpm`, `deg`, `mm`). Extra columns are ignored. Rows are skipped if the shot number is missing or non-numeric, or if the first cell looks like a summary row (`Avg`, `Average`, `Total`).
